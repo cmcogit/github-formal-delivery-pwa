@@ -37,6 +37,6 @@ grid-container {
 
 @media screen and (max-width: 700px) {
   .menu h1 {
-    font-size: 20px;
+    font-size: 10px;
   }
 }
