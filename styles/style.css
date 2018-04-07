@@ -27,6 +27,10 @@ body {
   flex-wrap: wrap;
 }
 
+.menu-refresh {
+  font-size: 1.5em;
+}
+
 .btn {
   width: 100px;
 }
