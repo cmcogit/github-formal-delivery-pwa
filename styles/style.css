@@ -20,7 +20,6 @@ body {
 }
 
 .menu {
-  /* border: 1px solid #fff; */
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -29,8 +28,6 @@ body {
 }
 
 nav a {
-  /* width: 30%; */
-  /* width: 15em; */
   padding: .25em;
   color: #343a40;
   background-color: #ffc107;
@@ -43,20 +40,6 @@ nav a:hover, nav a:focus {
   color: rgba(255,255,255, 1.0);
   text-decoration: none;
 }
-
-/* .menu-refresh {
-  font-size: 1.0em;
-  padding: .20em;
-  background-color: #ffc107;
-  border-radius: 0.20em;
-  text-decoration: none;
-  text-align: center;
-} */
-
-/* .btn-refresh {
-  text-decoration: none;
-  color: #343a40;
-} */
 
 .btn {
   width: 100px;
