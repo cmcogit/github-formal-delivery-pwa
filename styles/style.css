@@ -36,9 +36,13 @@ nav a {
   text-align: center;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover {
   color: rgba(255,255,255, 1.0);
   text-decoration: none;
+}
+
+nav a:active {
+  color: #343a40;
 }
 
 .btn {
