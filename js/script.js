@@ -1,27 +1,29 @@
+// GET FORMAL DELIVERY DATA THROUGH API
 document.getElementById('refresh').addEventListener('click', loadUsers);
-  
-    function loadUsers() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://cmcodevapi.azurewebsites.net/api/persons', true);
+function loadUsers() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://cmcodevapi.azurewebsites.net/api/persons', true);
 
-      xhr.onload = function() {
+    xhr.onload = function() {
+    
         if(this.status == 200) {
-          var users = JSON.parse(this.responseText);
+            var users = JSON.parse(this.responseText);
 
-          // console.log(users);
+            var output = '';
+            for(i in users){
+                output +=
+                '<div class="user">' +
+                '<ul>' +
+                '<li>Name: ' + users[i].Name + '</li>' +
+                '<li>Customer Number: ' + users[i].PartitionKey + '</li>' +
+                '</ul>' +
+                '</div>' +
+                '</div>';
+            }
 
-          var output = '';
-          for(i in users){
-            output +=
-              '<div class="user">' +
-              '<ul>' +
-              '<li>Name: ' + users[i].Name + '</li>' +
-              '<li>Customer Number: ' + users[i].PartitionKey + '</li>' +
-              '</ul>' +
-              '</div>';
-          }
-          document.getElementById('users').innerHTML = output;
+            document.getElementById('content').innerHTML = output;
         }
-      }
-      xhr.send();
     }
+
+    xhr.send();
+}
